@@ -36,7 +36,7 @@
                     <div class="form-group">
                         <input class="form-control" type="stext" name="title" placeholder="Title" required autofocus value="<?php if(isset($title)) echo $title; ?>">
                         <?php if(isset($title)){
-                            ?><input type="hidden" name="edid" value="<?php echo $_GET['edid']?>"><?php } ?>
+                            ?><input type="hidden" name="edid" value="<?php echo htmlentities($_GET['edid'], ENT_QUOTES); ?>"><?php } ?>
 
                     </div>
                     <input type="submit" class="btn btn-success mt-3" name="save_task" value="Save todo">
